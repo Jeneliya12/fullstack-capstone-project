@@ -1,19 +1,74 @@
 /* Task 1: Style the body */
 body {
-    /* insert code here */
+    font-family: 'Montserrat', sans-serif; /* Use the Montserrat font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    overflow: hidden; /* Hide overflow */
+    background-color: #f4f4f4; /* Set background color */
 }
 
 /* Task 2: Create a pseudo-element for the background and blur */
 body::before {
-    /* insert code here */
+    content: ''; /* Create an empty content for the pseudo-element */
+    position: fixed; /* Fix position to cover the entire viewport */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    width: 100%; /* Cover the entire width */
+    height: 100%; /* Cover the entire height */
+    background: url('your-background-image.jpg') no-repeat center center; /* Set background image */
+    background-size: cover; /* Cover the entire element */
+    filter: blur(8px); /* Apply blur effect */
+    z-index: -1; /* Send behind the content */
 }
 
 /* Task 3: Style the content area */
 .content {
-    /* insert code here */
+    position: relative; /* Position relative to the pseudo-element */
+    z-index: 1; /* Ensure it’s above the background */
+    text-align: center; /* Center text alignment */
+    color: #333; /* Set text color */
+    max-width: 600px; /* Set maximum width */
+    padding: 20px; /* Add padding for readability */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 8px; /* Rounded corners */
 }
 
 /* Task 4: Add styles for headings, paragraphs, and buttons */
-h1, h2, .lead, .btn-primary {
-    /* insert code here */
+h1 {
+    font-size: 2.5em; /* Font size for main heading */
+    font-weight: bold; /* Bold font weight */
+    color: #222; /* Darker text color */
+}
+
+h2 {
+    font-size: 2em; /* Font size for secondary heading */
+    font-weight: bold; /* Bold font weight */
+    color: #333; /* Text color */
+}
+
+.lead {
+    font-size: 1.2em; /* Font size for lead text */
+    color: #666; /* Text color for lead */
+    margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+.btn-primary {
+    display: inline-block; /* Inline block for button styling */
+    font-size: 1em; /* Font size for button text */
+    font-weight: bold; /* Bold font weight */
+    color: #fff; /* White text color */
+    background-color: #007bff; /* Primary button background color */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker background on hover */
 }
